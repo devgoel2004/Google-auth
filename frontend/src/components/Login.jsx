@@ -1,13 +1,18 @@
 import React from "react";
 
 const Login = () => {
-  const handleLogin = () => {
-    window.open("http://localhost:8000/auth/google", "_self");
+  const handleGoogleLogin = () => {
+    window.location.href = "http://localhost:8000/auth/google"; // Redirect to backend Google auth
   };
+
   return (
-    <div>
-      <h2>Login With Google</h2>
-      <button onClick={handleLogin}>Sign in with google</button>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Login</h2>
+      <button
+        onClick={handleGoogleLogin}
+        style={{ padding: "10px", fontSize: "16px" }}>
+        Login with Google
+      </button>
     </div>
   );
 };
